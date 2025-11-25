@@ -10,5 +10,5 @@ if ($jh_conexion->connect_error) {
     die("Error de conexión: " . $jh_conexion->connect_error);
 }
 
-$jh_conexion->set_charset("utf8");// las tildessss
+$jh_conexion->set_charset("utf8");// las tildessss y los iconos
 ?>
