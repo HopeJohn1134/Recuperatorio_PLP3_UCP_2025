@@ -1,0 +1,175 @@
+
+
+:root {
+    --jh-bg-color: #1a1a2e;
+    --jh-card-bg: #16213e;
+    --jh-text-main: #ffffff;
+    --jh-text-muted: #a0a0a0;
+    --jh-primary: #0f3460;
+    --jh-accent: #e94560;
+    --jh-success: #4caf50;
+    --jh-warning: #ff9800;
+    --jh-border-radius: 10px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--jh-bg-color);
+    color: var(--jh-text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.jh_contenedor_principal {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.jh_oculto {
+    display: none !important;
+}
+
+/* Tarjetas y Contenedores */
+.jh_card, .jh_card_tablero {
+    background-color: var(--jh-card-bg);
+    padding: 2rem;
+    border-radius: var(--jh-border-radius);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.jh_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Formularios */
+.jh_form_grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.jh_input {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background: #0f3460;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Botones */
+.jh_botones_grupo {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.jh_boton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.jh_boton:hover {
+    transform: scale(1.05);
+}
+
+.jh_boton_primary { background-color: var(--jh-success); color: white; }
+.jh_boton_secondary { background-color: var(--jh-primary); color: white; }
+.jh_boton_danger { background-color: var(--jh-accent); color: white; }
+.jh_boton_grande {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    background-color: var(--jh-accent);
+    color: white;
+    margin-top: 20px;
+}
+
+/* Tabla */
+.jh_tabla_container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.jh_tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.jh_tabla th, .jh_tabla td {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    text-align: center;
+}
+
+.jh_tabla th {
+    background-color: var(--jh-primary);
+    color: #fff;
+}
+
+/* Juego */
+.jh_opciones_juego {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.jh_opcion {
+    background: var(--jh-card-bg);
+    border: 2px solid var(--jh-primary);
+    color: white;
+    font-size: 2rem;
+    padding: 20px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.jh_opcion:hover {
+    background: var(--jh-primary);
+}
+
+/* Animación y Resultado */
+.jh_texto_gigante {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--jh-warning);
+    animation: jh_latido 0.5s infinite alternate;
+}
+
+.jh_titulo_resultado {
+    font-size: 3rem;
+    color: var(--jh-success);
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.jh_versus {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+@keyframes jh_latido {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
